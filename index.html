@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Calculadora</h1>
+      <p>(No se admiten decimales [.] ni irracionales [e])</p>
+      <div class="component">
+ 
+        <br />
+
+        <div class="form" id="miFormulario" method="post">
+          <div class="inputC">
+            <td>Ingrese el valor 1:</td>
+            <input id="numUno" type="number"/>
+          </div>
+          <div class="inputC">
+            <td>Ingrese el valor 2:</td>
+            <input id="numDos" type="number"/>
+          </div>
+          <div class="inputC">
+            <td>Elija el operador:</td>
+            <select id="selectOp">
+              <option value="1">+</option>
+              <option value="2">-</option>
+              <option value="3">/</option>
+              <option value="4">*</option>
+            </select>
+          </div>
+          <div class="inputC">
+            <td>Elija la forma de mostrar el resultado:</td>
+            <div>
+                <input class="dos" type="radio" id="radioPage" name="selec-radio" value="radioPage" checked>
+                <label for="radioPage">El al pagina</label>
+            </div>
+           <div>
+                <input type="radio" id="radioAlert" name="selec-radio" value="radioAlert"  />
+                <label for="radioAlert">El una alerta</label>
+           </div>
+           
+          </div>
+          <button id="calcular" onclick="calcular()">Calcular</button>          
+        </div>
+
+        <div class="res">
+            <span id="resultado">¡Área para resultado!</span>
+        </div>
+
+        <div class="cabeHistorial">
+            <img src="./img/hoja-de-tiempo.png" width="30px">
+            <span>Historial...................................</span>
+        </div>
+        
+
+      </div>
+    </div>
+
+    <script src="./js/scriptUno.js"></script>
+  </body>
+</html>
