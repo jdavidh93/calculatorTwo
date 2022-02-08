@@ -1,44 +1,32 @@
-function calcular () {
-    const resultado = document.getElementById("resultado");
+function calcular() {
+  const resultado = document.getElementById("resultado");
 
-    const numUno = document.getElementById("numUno").value;
-    const numDos = document.getElementById("numDos").value;
-    const selectOp = document.querySelector("selectOp");
-    const radioPage = document.getElementById("radioPage");
-    const radioAlert = document.getElementById("radioAlert");
+  const numUno = document.getElementById("numUno").value;
+  const numDos = document.getElementById("numDos").value;
+  const selectOp = document.getElementById("selectOp").value;
+  const radioPage = document.getElementById("radioPage").value;
+  const radioAlert = document.getElementById("radioAlert").value;
 
+  switch (selectOp) {
+    case "1":
+      if (document.getElementById("resultado")==radioPage) {
+        document.getElementById("resultado").innerHTML = numUno + numDos;
+      } else {
+        alert("hola" , radioAlert);
+      }
 
-    switch (document.getSelection("selectOp")) {
-        case 1:
-            document.getElementById("resultado").innerHTML = numUno + numDos;
-            break;
-            case '2':
-            document.getElementById("resultado").innerHTML = numUno - numDos;
-            break;
-            case ["3"]:
-            document.getElementById("resultado").innerHTML = numUno / numDos;
-            break;
-            case "4":
-            document.getElementById("resultado").innerHTML = numUno * numDos;
-            break;
-    
-        default:
-            break;
-    }
+      break;
+    case "2":
+      document.getElementById("resultado").innerHTML = numUno - numDos;
+      break;
+    case "3":
+      document.getElementById("resultado").innerHTML = numUno / numDos;
+      break;
+    case "4":
+      document.getElementById("resultado").innerHTML = numUno * numDos;
+      break;
 
-    // document.getElementById("resultado").innerHTML = numUno * numDos;
-
+    default:
+      break;
+  }
 }
-
-// const calcular = document.getElementById("calcular");
-
-
-// fnCalcular = () => {
-//   resultado.innerHTML = numUno + numDos;
-//   //   console.log("hola");
-//   document.getElementById("resultado").innerHTML = numUno + numDos;
-// };
-
-// calcular.onclick = () => {
-//   fnCalcular();
-// };
